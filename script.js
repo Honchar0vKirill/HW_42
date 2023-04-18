@@ -29,3 +29,20 @@ const changeTheme = () => {
 }
 
 changeThemeBtn.addEventListener('click', changeTheme);
+
+let contactForm = document.getElementById("contact-form");
+  contactForm.addEventListener("submit", function(event) {
+    event.preventDefault(); 
+    
+    let nameInput = document.getElementById("sendName");
+    let emailInput = document.getElementById("sendEmail");
+    let messageInput = document.getElementById("sendMessage");
+    
+    let nameValue = nameInput.value;
+    let emailValue = emailInput.value;
+    let messageValue = messageInput.value;
+    
+    console.log("Name: " + nameValue);
+    console.log("Email: " + emailValue);
+    console.log("Message: " + messageValue);
+  });
